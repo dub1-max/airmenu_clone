@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 99%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -17,26 +17,32 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 339 85% 78%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 339 85% 95%;
+    --secondary-foreground: 339 85% 20%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 339 85% 97%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 339 85% 90%;
+    --accent-foreground: 339 85% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 339 85% 88%;
+    --input: 339 85% 95%;
+    --ring: 339 85% 78%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+    
+    /* Custom colors for food business */
+    --warm-cream: 42 100% 97%;
+    --soft-rose: 339 85% 85%;
+    --deep-rose: 339 85% 65%;
+    --elegant-gray: 220 13% 91%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -65,7 +71,7 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 339 85% 78%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
