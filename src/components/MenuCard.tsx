@@ -43,7 +43,7 @@ export const MenuCard = ({
   };
 
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 border-elegant-gray">
+    <Card className="overflow-hidden hover:shadow-xl transition-all duration-500 border-light-brown bg-white/80 backdrop-blur-sm hover:-translate-y-1 animate-scale-in">
       <div className="relative">
         <img 
           src={imageUrl} 
@@ -51,12 +51,12 @@ export const MenuCard = ({
           className="w-full h-48 object-cover"
         />
         {isSpecial && (
-          <Badge className="absolute top-2 right-2 bg-deep-rose text-white">
+          <Badge className="absolute top-3 right-3 bg-deep-brown text-white shadow-lg rounded-xl">
             Limited Special
           </Badge>
         )}
         {stock <= 5 && stock > 0 && (
-          <Badge variant="destructive" className="absolute top-2 left-2">
+          <Badge variant="destructive" className="absolute top-3 left-3 shadow-lg rounded-xl">
             Only {stock} left!
           </Badge>
         )}

@@ -53,6 +53,7 @@ interface CartItem {
 }
 
 const Index = () => {
+  const [showMenu, setShowMenu] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [quantities, setQuantities] = useState<Record<string, number>>({});
 
@@ -100,39 +101,60 @@ const Index = () => {
     console.log("Proceeding to table selection...");
   };
 
+  const handleViewMenu = () => {
+    setShowMenu(true);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <Hero />
       
-      <section className="py-12 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Delicious Menu</h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <div className="lg:col-span-3">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {sampleMenuItems.map((item) => (
-                  <MenuCard
-                    key={item.id}
-                    {...item}
-                    quantity={quantities[item.id] || 0}
-                    onQuantityChange={handleQuantityChange}
+      {!showMenu ? (
+        <Hero onViewMenu={handleViewMenu} />
+      ) : (
+        <>
+          {/* Menu Section */}
+          <section className="pt-24 pb-12 px-6 bg-gradient-to-b from-warm-white to-background">
+            <div className="container mx-auto">
+              <div className="text-center mb-12 animate-fade-in">
+                <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+                  Our <span className="text-primary">Delicious</span> Menu
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                  Carefully crafted dishes made with the finest ingredients
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <div className="lg:col-span-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {sampleMenuItems.map((item, index) => (
+                      <div 
+                        key={item.id}
+                        style={{ animationDelay: `${index * 0.1}s` }}
+                      >
+                        <MenuCard
+                          {...item}
+                          quantity={quantities[item.id] || 0}
+                          onQuantityChange={handleQuantityChange}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="lg:col-span-1">
+                  <Cart
+                    items={cartItems}
+                    onRemoveItem={handleRemoveItem}
+                    onProceedToReservation={handleProceedToReservation}
                   />
-                ))}
+                </div>
               </div>
             </div>
-            
-            <div className="lg:col-span-1">
-              <Cart
-                items={cartItems}
-                onRemoveItem={handleRemoveItem}
-                onProceedToReservation={handleProceedToReservation}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        </>
+      )}
     </div>
   );
 };

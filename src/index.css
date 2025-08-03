@@ -8,41 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 100%;
+    --foreground: 28 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 28 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 28 25% 15%;
 
-    --primary: 339 85% 78%;
+    --primary: 28 75% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 339 85% 95%;
-    --secondary-foreground: 339 85% 20%;
+    --secondary: 28 15% 95%;
+    --secondary-foreground: 28 25% 25%;
 
-    --muted: 339 85% 97%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 28 10% 96%;
+    --muted-foreground: 28 15% 45%;
 
-    --accent: 339 85% 90%;
-    --accent-foreground: 339 85% 20%;
+    --accent: 28 20% 90%;
+    --accent-foreground: 28 25% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 339 85% 88%;
-    --input: 339 85% 95%;
-    --ring: 339 85% 78%;
+    --border: 28 15% 88%;
+    --input: 28 10% 95%;
+    --ring: 28 75% 35%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
     
-    /* Custom colors for food business */
-    --warm-cream: 42 100% 97%;
-    --soft-rose: 339 85% 85%;
-    --deep-rose: 339 85% 65%;
-    --elegant-gray: 220 13% 91%;
+    /* Modern brown color palette */
+    --warm-white: 28 25% 98%;
+    --soft-brown: 28 45% 65%;
+    --deep-brown: 28 75% 25%;
+    --light-brown: 28 25% 90%;
+    
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(var(--warm-white)), hsl(var(--light-brown)));
+    --gradient-brown: linear-gradient(135deg, hsl(var(--soft-brown)), hsl(var(--deep-brown)));
 
     --sidebar-background: 0 0% 98%;
 

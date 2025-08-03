@@ -23,7 +23,7 @@ export const Cart = ({ items, onRemoveItem, onProceedToReservation }: CartProps)
 
   if (totalItems === 0) {
     return (
-      <Card className="sticky top-4 border-elegant-gray">
+    <Card className="sticky top-24 border-light-brown bg-white/90 backdrop-blur-sm shadow-xl animate-fade-in">
         <CardContent className="p-6 text-center">
           <ShoppingCart className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
           <p className="text-muted-foreground">Your cart is empty</p>
@@ -34,7 +34,7 @@ export const Cart = ({ items, onRemoveItem, onProceedToReservation }: CartProps)
   }
 
   return (
-    <Card className="sticky top-4 border-elegant-gray">
+    <Card className="sticky top-24 border-light-brown bg-white/90 backdrop-blur-sm shadow-xl animate-fade-in">
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <ShoppingCart className="h-5 w-5" />
@@ -44,7 +44,7 @@ export const Cart = ({ items, onRemoveItem, onProceedToReservation }: CartProps)
       <CardContent>
         <div className="space-y-3 mb-4">
           {items.map((item) => (
-            <div key={item.id} className="flex items-center justify-between p-2 bg-warm-cream rounded-lg">
+            <div key={item.id} className="flex items-center justify-between p-3 bg-light-brown/30 rounded-xl border border-light-brown/20">
               <div className="flex-1">
                 <div className="flex items-center space-x-2">
                   <span className="font-medium text-sm">{item.name}</span>
@@ -71,14 +71,14 @@ export const Cart = ({ items, onRemoveItem, onProceedToReservation }: CartProps)
           ))}
         </div>
         
-        <div className="border-t border-elegant-gray pt-4">
+        <div className="border-t border-light-brown pt-6">
           <div className="flex items-center justify-between mb-4">
             <span className="font-bold text-lg">Total: ₹{totalPrice}</span>
           </div>
           
           <Button 
             onClick={onProceedToReservation}
-            className="w-full bg-primary hover:bg-deep-rose text-white py-6 text-lg rounded-full"
+            className="w-full bg-primary hover:bg-deep-brown text-white py-6 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             size="lg"
           >
             Proceed to Table Selection
